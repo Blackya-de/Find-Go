@@ -1,3 +1,11 @@
+<?php
+$user = 'yacine';
+$pass = "password";
+
+$db = new PDO('mysql:host=localhost;dbname=FINDGO' , $user , $pass ,array(PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+$reponse = $db->query('SELECT * FROM business');
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -20,6 +28,10 @@
               <a href="#"> <li class="fa fa-search"></li> </a>
             </div>
           </div>
+          <div id="for-business">
+            <a href="#">For Businesses</a>
+            <a href="#">For Clients</a>
+          </div>
           <div class="login-sigup-button">
             <a href="login.html" class="btn">Login</a>
             <a href="signup.html" class="btn" id="SignUp">SignUp</a>
@@ -32,9 +44,9 @@
               <i class="fas fa-chevron-down"></i>
             </span>
             <div class="dropdown-content">
-              <a href="#">Plombier</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <a href="#">Fast-Food</a>
+              <a href="#">Traditionnelle</a>
+              <a href="#">Livraison</a>
             </div>
           </div>
           <div class="dropdown">
@@ -124,119 +136,48 @@
           <div class="search-desc">
             <h2 id="search-title">Résultat pour Tizi Ouzou</h2>
             <div class="sort">
-              <p>Trié&nbsp;:&nbsp;</p>
-              <div class="dropdown">
-                <a href="#">Recommandé</a>
-                <span style="font-size: 14px; color: Dodgerblue;">
-                  <i class="fas fa-chevron-down"></i>
-                </span>
-                <div class="dropdown-content">
-                  <a href="#">Plus Visité</a>
-                  <a href="#">Plus liké</a>
-                </div>
-              </div>
+              <p>Tiré&nbsp;:&nbsp;</p>
+              <a href="#"> Recommandé
+              <span style="font-size: 13px; color: Dodgerblue;">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+              </a>
             </div>
           </div>
-          <div class="box-container">
+          <?php
+            $i = 1;
+            while($donnes = $reponse->fetch())
+             {
+            ?>
+            <div class="box-container">
             <div class="image-container">
-              <img src="img/Food.jpeg" alt="">
+              <img src=<?php echo $donnes['img'] ?> alt="">
             </div>
             <div class="info-container">
               <div class="profile-info">
-                <h2><a href="#">1.The Twelve</a></h2>
+                <h2><a href="#"><?php echo $i.'.'.$donnes['nom']; ?></a></h2>
                 <div class="stars">
-                  <p>50K</p>
+                  <p><?php echo $donnes['NbrLike']; ?></p>
                   <span style="font-size: 18px; color: Dodgerblue;">
                     <i class="fas fa-star"></i>
                   </span>
                 </div>
               </div>
-              <p>Restaurant</p>
+              <?php echo '<p>' .$donnes['cat'] .'</p>'?>
               <div id="location">
                 <span style="font-size: 20px; color: Dodgerblue;">
                   <i class="fas fa-map-marker-alt"></i>
                 </span>
-                <a href="#">La Tour Tizi-ouzou.</a>
+                <a href="#"> <?php echo $donnes['adr'] ?>.</a>
               </div>
-              <p id="info-text"><span>&ldquo;</span> The Twelve Est une chaîne de restauration rapide algérienne présente
-                 dans la wilaya de Tizi-Ouzou, fondée en 2017. <span>&ldquo;</span> <a href="#" id="plus">Plus</a> </p>
+              <p id="info-text"><span>&ldquo;</span> <?php echo $donnes['descr'] ?> .
+                  <span>&ldquo;</span></p>
             </div>
           </div>
-          <div class="box-container">
-            <div class="image-container">
-              <img src="img/Gym.jpeg" alt="">
-            </div>
-            <div class="info-container">
-              <div class="profile-info">
-                <h2><a href="#">2.Need For Gym</a></h2>
-                <div class="stars">
-                  <p>10K</p>
-                  <span style="font-size: 18px; color: Dodgerblue;">
-                    <i class="fas fa-star"></i>
-                  </span>
-                </div>
-              </div>
-              <p>Restaurant</p>
-              <div id="location">
-                <span style="font-size: 20px; color: Dodgerblue;">
-                  <i class="fas fa-map-marker-alt"></i>
-                </span>
-                <a href="#">La Tour Tizi-ouzou.</a>
-              </div>
-              <p id="info-text"><span>&ldquo;</span> The Twelve Est une chaîne de restauration rapide algérienne présente
-                 dans la wilaya de Tizi-Ouzou, fondée en 2017. <span>&ldquo;</span></p>
-            </div>
-          </div>
-          <div class="box-container">
-            <div class="image-container">
-              <img src="img/Food.jpeg" alt="">
-            </div>
-            <div class="info-container">
-              <div class="profile-info">
-                <h2><a href="#">1.The Twelve</a></h2>
-                <div class="stars">
-                  <p>50K</p>
-                  <span style="font-size: 18px; color: Dodgerblue;">
-                    <i class="fas fa-star"></i>
-                  </span>
-                </div>
-              </div>
-              <p>Restaurant</p>
-              <div id="location">
-                <span style="font-size: 20px; color: Dodgerblue;">
-                  <i class="fas fa-map-marker-alt"></i>
-                </span>
-                <a href="#">La Tour Tizi-ouzou.</a>
-              </div>
-              <p id="info-text"><span>&ldquo;</span> The Twelve Est une chaîne de restauration rapide algérienne présente
-                 dans la wilaya de Tizi-Ouzou, fondée en 2017. <span>&ldquo;</span> <a href="#" id="plus">Plus</a> </p>
-            </div>
-          </div>
-          <div class="box-container">
-            <div class="image-container">
-              <img src="img/Food.jpeg" alt="">
-            </div>
-            <div class="info-container">
-              <div class="profile-info">
-                <h2><a href="#">1.The Twelve</a></h2>
-                <div class="stars">
-                  <p>50K</p>
-                  <span style="font-size: 18px; color: Dodgerblue;">
-                    <i class="fas fa-star"></i>
-                  </span>
-                </div>
-              </div>
-              <p>Restaurant</p>
-              <div id="location">
-                <span style="font-size: 20px; color: Dodgerblue;">
-                  <i class="fas fa-map-marker-alt"></i>
-                </span>
-                <a href="#">La Tour Tizi-ouzou.</a>
-              </div>
-              <p id="info-text"><span>&ldquo;</span> The Twelve Est une chaîne de restauration rapide algérienne présente
-                 dans la wilaya de Tizi-Ouzou, fondée en 2017. <span>&ldquo;</span> <a href="#" id="plus">Plus</a> </p>
-            </div>
-          </div>
+            <?php
+            $i++;
+            }
+            ?>
         </div>
       </section>
     </header>
@@ -248,3 +189,6 @@
     </div>
   </body>
 </html>
+<<?php
+  echo '<p>'.$donnes['nom'].'</p>'
+ ?>
