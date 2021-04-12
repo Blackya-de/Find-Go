@@ -1,0 +1,65 @@
+.nav-bar{
+  padding-bottom: 14px;
+}
+.header-descr{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+}
+.header-descr h1{
+  font-size: 25px;
+  text-align: center;
+  padding: 28px 14px;
+  text-transform: uppercase;
+}
+button{
+  background-color: #ff5f6d;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+}
+section{
+  height: 60vh;
+  padding: 20px 0;
+}
+.first{
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+.first .section-text{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 50px;
+  overflow: hidden;
+}
+section h2{
+  color: #ff5f6d;
+  font-size: 22px;
+  text-align: center;
+  padding: 20px;
+  text-transform: uppercase;
+}
+section p{
+  text-align: center;
+}
+.section-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*---------------------------------------------------------*/
+.second{
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.second .section-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
