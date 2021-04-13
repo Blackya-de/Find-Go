@@ -44,8 +44,31 @@ section h2{
   text-transform: uppercase;
 }
 section p{
+  font-size: 16px;
   text-align: center;
 }
+.section-text{
+  padding: 25px;
+  margin: 0 20px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.15);
+  background: #fafafa;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.section-text:hover{
+  transform: translateY(-5%);
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.3);
+}
+/*.section-text h2:hover,
+.section-text h2:active{
+  font-size: 25px;
+  transition: 0.3s;
+}
+.section-text p:hover,
+.section-text p:active{
+  font-size: 18px;
+  transition: 0.3s;
+}*/
 .section-image{
   display: flex;
   align-items: center;
@@ -62,4 +85,5 @@ section p{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-right: 50px;
 }

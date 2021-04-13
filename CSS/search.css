@@ -54,7 +54,6 @@ li{
   justify-content: center;
   overflow: hidden;
   padding-top: 14px;
-<<<<<<< HEAD
 }
 .nav-bar-menu a{
   padding: 14px 16px;
@@ -76,7 +75,6 @@ li{
   font-family: inherit;
   margin: 0;
 }
-=======
 }
 .nav-bar-menu a{
   padding: 14px 16px;
@@ -98,7 +96,6 @@ li{
   font-family: inherit;
   margin: 0;
 }
->>>>>>> 6828db5cf98a9991f53077744c68b48fedda4f0b
 /* Style the dropdown content (hidden by default) */
 .dropdown-content {
   display: none;

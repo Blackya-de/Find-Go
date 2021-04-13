@@ -29,11 +29,7 @@ $reponse = $db->query('SELECT * FROM business');
             </div>
           </div>
           <div id="for-business">
-<<<<<<< HEAD
             <a href="business.php">For Businesses</a>
-=======
-            <a href="#">For Businesses</a>
->>>>>>> 6828db5cf98a9991f53077744c68b48fedda4f0b
             <a href="#">For Clients</a>
           </div>
           <div class="login-sigup-button">
@@ -140,7 +136,6 @@ $reponse = $db->query('SELECT * FROM business');
           <div class="search-desc">
             <h2 id="search-title">Résultat pour Tizi Ouzou</h2>
             <div class="sort">
-<<<<<<< HEAD
               <div class="dropdown">
                 <a href="#">Recommandé</a>
                 <span style="font-size: 14px; color: Dodgerblue;">
@@ -151,14 +146,6 @@ $reponse = $db->query('SELECT * FROM business');
                   <a href="#">Plus liké</a>
                 </div>
               </div>
-=======
-              <p>Tiré&nbsp;:&nbsp;</p>
-              <a href="#"> Recommandé
-              <span style="font-size: 13px; color: Dodgerblue;">
-                <i class="fas fa-chevron-down"></i>
-              </span>
-              </a>
->>>>>>> 6828db5cf98a9991f53077744c68b48fedda4f0b
             </div>
           </div>
           <?php
@@ -206,6 +193,3 @@ $reponse = $db->query('SELECT * FROM business');
     </div>
   </body>
 </html>
-<<?php
-  echo '<p>'.$donnes['nom'].'</p>'
- ?>
