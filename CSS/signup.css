@@ -14,6 +14,9 @@ h3{
   display: grid;
   grid-template-columns: 70% 30%;
 }
+.logo img{
+  margin-bottom: 40px;
+}
 .signup-info{
   padding: 35px;
   display: flex;

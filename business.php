@@ -58,5 +58,17 @@
             se multiplient, ce qui peut vous permettre de développer votre activité.</p>
       </div>
     </section>
+    <section>
+      <div class="nslpv">
+        <h2>Nous somme là pour vous</h2>
+        <p>Notre équipe de support Udemy est disponible 24 h/24 et 7 j/7 pour vous accompagner à chaque
+           étape de la création de votre cours. Consultez notre Teaching Center pour mieux
+          comprendre le processus de création de cours. Rejoignez notre groupe communautaire Studio U,
+          composé de formateurs Udemy toujours prêts à partager leurs conseils et bonnes pratiques.</p>
+      </div>
+    </section>
+    <footer>
+
+    </footer>
   </body>
 </html>

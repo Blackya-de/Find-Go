@@ -13,6 +13,9 @@ h3{
   display: grid;
   grid-template-columns: 30% 70%;
 }
+.logo img{
+  margin-bottom: 40px;
+}
 .login-info{
   padding: 35px;
   display: flex;

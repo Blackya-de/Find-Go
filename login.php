@@ -1,3 +1,17 @@
+<?php
+$user = 'yacine';
+$pass = "password";
+
+try
+{
+  $db = new PDO('mysql:host=localhost;dbname=FINDGO' , $user , $pass ,array(PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+}
+catch(Exception $db)
+{
+  die('Erreur : '.$bd->getMessage());
+}
+$reponse = $db->query('SELECT * FROM business');
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,7 +22,9 @@
   <body>
     <div class="login-page">
       <div class="login-info">
-        <img src="img/Find,Go.png" alt="" width="100px" height="80px" id="logo">
+        <div class="logo">
+          <a href="#"><img src="img/Logo2.svg" alt="Logo" width="150px"></a>
+        </div>
         <div class="login-info-title">
           <h1>Welcome Back!</h1>
         </div>
@@ -21,7 +37,6 @@
         <img src="img/wrong.svg" alt="" height="30px" width="30px" id="close_page">
         <div class="login-form-title">
           <h1>Login To Your Account</h1>
-          <p></p>
         </div>
         <div class="social-media">
           <img src="img/facebook.svg" alt="" width="40px" height="40px">

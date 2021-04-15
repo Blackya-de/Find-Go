@@ -2,7 +2,14 @@
 $user = 'yacine';
 $pass = "password";
 
-$db = new PDO('mysql:host=localhost;dbname=FINDGO' , $user , $pass ,array(PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+try
+{
+  $db = new PDO('mysql:host=localhost;dbname=FINDGO' , $user , $pass ,array(PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+}
+catch(Exception $db)
+{
+  die('Erreur : '.$bd->getMessage());
+}
 $reponse = $db->query('SELECT * FROM business');
 ?>
 
@@ -20,7 +27,7 @@ $reponse = $db->query('SELECT * FROM business');
       <div class="nav-bar">
         <div class="nav-bar-header">
           <div class="logo">
-            <h3>Find,Go</h3>
+            <a href="#"><img src="img/Logo2.svg" alt="Logo" width="100px"></a>
           </div>
           <div class="search-bar">
             <div class="search-container">
@@ -29,16 +36,12 @@ $reponse = $db->query('SELECT * FROM business');
             </div>
           </div>
           <div id="for-business">
-<<<<<<< HEAD
             <a href="business.php">For Businesses</a>
-=======
-            <a href="#">For Businesses</a>
->>>>>>> 6828db5cf98a9991f53077744c68b48fedda4f0b
             <a href="#">For Clients</a>
           </div>
           <div class="login-sigup-button">
-            <a href="login.html" class="btn">Login</a>
-            <a href="signup.html" class="btn" id="SignUp">SignUp</a>
+            <a href="login.php" class="btn">Login</a>
+            <a href="register.php" class="btn" id="SignUp">SignUp</a>
           </div>
         </div>
         <div class="nav-bar-menu">
@@ -140,7 +143,6 @@ $reponse = $db->query('SELECT * FROM business');
           <div class="search-desc">
             <h2 id="search-title">Résultat pour Tizi Ouzou</h2>
             <div class="sort">
-<<<<<<< HEAD
               <div class="dropdown">
                 <a href="#">Recommandé</a>
                 <span style="font-size: 14px; color: Dodgerblue;">
@@ -151,14 +153,6 @@ $reponse = $db->query('SELECT * FROM business');
                   <a href="#">Plus liké</a>
                 </div>
               </div>
-=======
-              <p>Tiré&nbsp;:&nbsp;</p>
-              <a href="#"> Recommandé
-              <span style="font-size: 13px; color: Dodgerblue;">
-                <i class="fas fa-chevron-down"></i>
-              </span>
-              </a>
->>>>>>> 6828db5cf98a9991f53077744c68b48fedda4f0b
             </div>
           </div>
           <?php
@@ -206,6 +200,3 @@ $reponse = $db->query('SELECT * FROM business');
     </div>
   </body>
 </html>
-<<?php
-  echo '<p>'.$donnes['nom'].'</p>'
- ?>
