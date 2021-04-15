@@ -59,6 +59,7 @@
       </div>
     </section>
     <section>
+<<<<<<< HEAD
       <div class="nslpv">
         <h2>Nous somme là pour vous</h2>
         <p>Notre équipe de support Udemy est disponible 24 h/24 et 7 j/7 pour vous accompagner à chaque
@@ -69,6 +70,12 @@
     </section>
     <footer>
 
+=======
+
+    </section>
+    <footer>
+      
+>>>>>>> b1a7fde916199e075705b5d7d09e0ab0bd3610fe
     </footer>
   </body>
 </html>
