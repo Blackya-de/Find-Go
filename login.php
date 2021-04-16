@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="login-form">
-        <img src="img/wrong.svg" alt="" height="30px" width="30px" id="close_page">
+        <a href="search.php"><img src="img/wrong.svg" alt="" height="30px" width="30px" id="close_page"></a>
         <div class="login-form-title">
           <h1>Login To Your Account</h1>
         </div>

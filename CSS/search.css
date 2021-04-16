@@ -155,8 +155,8 @@ h1,h2,p,a,label{
 }
 .btn{
   text-align: center;
-  padding: 0.1cm 0.4cm;
-  font-size: 0.38cm;
+  padding: 0.3cm 0.4cm;
+  font-size: 15px;
   text-transform: none;
   color: #141414;
   border-radius: 8px;
@@ -170,7 +170,7 @@ h1,h2,p,a,label{
 }
 .btn:active,
 .btn:hover{
-    background-color: #1e90ff;
+    background-color: #ff6f88;
 }
 .search-container{
   border-radius: 10px;

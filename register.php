@@ -8,7 +8,7 @@
   <body>
     <div class="signup-page">
       <div class="signup-form">
-        <img src="img/wrong.svg" alt="" width="30px" height="30px" id="close_page">
+        <a href="search.php"><img src="img/wrong.svg" alt="" width="30px" height="30px" id="close_page"></a>
         <div class="login-form-title">
           <h1>Create Your Account</h1>
           <p></p>

@@ -15,12 +15,12 @@
      die('Veuillez remplir tous les champs');
    }
    $Stmt = $db->prepare('INSERT INTO business (nom,wilaya,cat,adr,NbrLike,descr,NumTel,img) VALUES (:nom,:wilaya,:cat,:adr,0,:descr,:num,:img);');
-   $Stmt-> bindParam('nom',$POST['nom']);
-   $Stmt-> bindParam('wilaya',$POST['wilaya']);
-   $Stmt-> bindParam('cat',$POST['cat']);
-   $Stmt-> bindParam('adr',$POST['adr']);
-   $Stmt-> bindParam('num',$POST['num']);
-   $Stmt-> bindParam('descr',$POST['descr']);
+   $Stmt-> bindParam('nom',$_POST['nom']);
+   $Stmt-> bindParam('wilaya',$_POST['wilaya']);
+   $Stmt-> bindParam('cat',$_POST['cat']);
+   $Stmt-> bindParam('adr',$_POST['adr']);
+   $Stmt-> bindParam('num',$_POST['num']);
+   $Stmt-> bindParam('descr',$_POST['descr']);
    $Stmt-> bindParam('img',$default);
    $Stmt->execute();
  ?>

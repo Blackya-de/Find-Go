@@ -8,11 +8,13 @@
   <body>
     <div class="info">
       <div class="logo">
-        <a href="#"><img src="img/businessLogo.svg" alt="Logo" width="200px"></a>
+        <a href="business.php"><img src="img/businessLogo.svg" alt="Logo" width="280px"></a>
       </div>
       <h2>Remplir les informations </br>de votre entreprise</h2>
+      <img src="img/information.svg" alt="" width="300px">
     </div>
     <div class="box-container">
+      <h3>Informations sur L'entreprise</h3>
       <form action="bus-profile.php" method="post">
         <input type="text" name="nom" placeholder="Nom de l'entreprise">
         <input type="text" name="wilaya" placeholder="Wilaya">
@@ -22,9 +24,6 @@
         <textarea name="descr" placeholder="Description" rows="8" cols="32"></textarea>
         <input type="submit" name="" placeholder="Continuer">
       </form>
-      <?php if (isset($_GET['error'])) {?>
-        <p class="error_message"><?php echo $_Get['error']; ?></p>
-      <?php } ?>
     </div>
   </body>
 </html>

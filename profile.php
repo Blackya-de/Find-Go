@@ -5,7 +5,7 @@
   if (isset($_POST['username']) && isset($_POST['password'])) {
     # code...
   }else{
-    header('Location: index.php');
+    header('Location: login.php');
     exit();
   }
   $msg='';

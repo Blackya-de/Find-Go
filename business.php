@@ -26,8 +26,8 @@
             <a href="#">For Clients</a>
           </div>
           <div class="login-sigup-button">
-            <a href="login.html" class="btn">Login</a>
-            <a href="signup.html" class="btn" id="SignUp">SignUp</a>
+            <a href="login.php" class="btn">Login</a>
+            <a href="register.php" class="btn" id="SignUp">SignUp</a>
           </div>
         </div>
       </div>
