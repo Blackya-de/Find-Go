@@ -1,17 +1,3 @@
-<?php
-$user = 'yacine';
-$pass = "password";
-
-try
-{
-  $db = new PDO('mysql:host=localhost;dbname=FINDGO' , $user , $pass ,array(PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-}
-catch(Exception $db)
-{
-  die('Erreur : '.$bd->getMessage());
-}
-$reponse = $db->query('SELECT * FROM business');
-?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -43,8 +29,11 @@ $reponse = $db->query('SELECT * FROM business');
           <img src="img/gmail.svg" alt="" width="40px" height="40px">
           <img src="img/linkedin.svg" alt="" width="40px" height="40px">
         </div>
+        <?php if (isset($_GET['error'])) {?>
+          <p class="error-message"><?php echo $_GET['error']; ?></p>
+        <?php } ?>
         <div class="login-form-form">
-          <form action="index.html" method="post" class="form">
+          <form action="profile.php" method="post" class="form">
             <div class="input-field">
               <i><img src="img/profile.svg" alt="" width="25px" height="25px"></i>
               <input type="text" name="username" placeholder="Username">

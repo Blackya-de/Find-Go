@@ -13,7 +13,7 @@
       <div class="nav-bar">
         <div class="nav-bar-header">
           <div class="logo">
-            <h3>Find,Go</h3>
+            <a href="#"><img src="img/businessLogo.svg" alt="Logo" width="100px"></a>
           </div>
           <div class="search-bar">
             <div class="search-container">
@@ -33,7 +33,7 @@
       </div>
       <div class="header-descr">
         <h1>Commencez dès maintenant à gérer votre profil d'établissement sur</br> Find Go .</h1>
-        <button type="button" name="button">Gérer mon business</button>
+        <a href="Create_business.php" class="button">Gérer mon business</a>
       </div>
     </header>
     <section class="first">
@@ -59,7 +59,6 @@
       </div>
     </section>
     <section>
-<<<<<<< HEAD
       <div class="nslpv">
         <h2>Nous somme là pour vous</h2>
         <p>Notre équipe de support Udemy est disponible 24 h/24 et 7 j/7 pour vous accompagner à chaque
@@ -70,12 +69,10 @@
     </section>
     <footer>
 
-=======
 
     </section>
     <footer>
-      
->>>>>>> b1a7fde916199e075705b5d7d09e0ab0bd3610fe
+
     </footer>
   </body>
 </html>

@@ -5,6 +5,9 @@
 a{
   text-decoration: none;
 }
+h1,h2,p,a,label{
+  font-family: Arial,'Nunito';
+}
 h3{
   color: #eee;
   font-weight: 200;
@@ -141,4 +144,8 @@ input[type="submit"]:active{
   position: absolute;
   top: 30px;
   left: 20px;
+}
+.error-message{
+  padding: 20px;
+  color: #ff5f6d;
 }

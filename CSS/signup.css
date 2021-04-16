@@ -10,6 +10,9 @@ h3{
   font-weight: 200;
   text-align: center;
 }
+h1,h2,p,a,label{
+  font-family: Arial,'Nunito';
+}
 .signup-page{
   display: grid;
   grid-template-columns: 70% 30%;

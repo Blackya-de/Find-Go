@@ -11,17 +11,7 @@
     die('Les deux mots de passes sont différents');
   }
 
-  $user = 'yacine';
-  $pass = "password";
-
-  try
-  {
-    $db = new PDO('mysql:host=localhost;dbname=FINDGO' , $user , $pass ,array(PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  }
-  catch(Exception $db)
-  {
-    die('Erreur : '.$bd->getMessage());
-  }
+  require_once'connection.php';
 
   $Stmt = $db->prepare('INSERT INTO users (nom , email ,password) VALUES (?,?,?)');
   $Stmt-> bindParam(1,$data['username']);
