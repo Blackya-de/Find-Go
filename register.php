@@ -11,7 +11,10 @@
         <a href="search.php"><img src="img/wrong.svg" alt="" width="30px" height="30px" id="close_page"></a>
         <div class="login-form-title">
           <h1>Create Your Account</h1>
-          <p></p>
+          <p><?php
+            if (isset($_GET)) {
+              echo $_GET['error'];
+            }?></p>
         </div>
         <div class="social-media">
           <img src="img/facebook.svg" alt="" width="40px" height="40px">
