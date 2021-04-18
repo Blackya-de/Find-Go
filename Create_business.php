@@ -15,7 +15,7 @@
     </div>
     <div class="box-container">
       <h3>Informations sur L'entreprise</h3>
-      <form action="bus-profile.php" method="post">
+      <form action="add_business.php" method="post">
         <input type="text" name="nom" placeholder="Nom de l'entreprise">
         <input type="text" name="wilaya" placeholder="Wilaya">
         <input type="text" name="cat" placeholder="Catégorie">

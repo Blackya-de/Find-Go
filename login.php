@@ -9,7 +9,7 @@
     <div class="login-page">
       <div class="login-info">
         <div class="logo">
-          <a href="#"><img src="img/Logo2.svg" alt="Logo" width="150px"></a>
+          <a href="search.php"><img src="img/Logo2.svg" alt="Logo" width="150px"></a>
         </div>
         <div class="login-info-title">
           <h1>Welcome Back!</h1>

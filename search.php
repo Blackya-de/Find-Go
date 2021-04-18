@@ -1,16 +1,8 @@
 <?php
-$user = 'yacine';
-$pass = "password";
-
-try
-{
-  $db = new PDO('mysql:host=localhost;dbname=FINDGO' , $user , $pass ,array(PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-}
-catch(Exception $db)
-{
-  die('Erreur : '.$bd->getMessage());
-}
-$reponse = $db->query('SELECT * FROM business');
+  session_start();
+  include("connection.php");
+  $reponse = $db->query('SELECT * FROM business');
+  $donnes = $reponse->fetch()
 ?>
 
 <!DOCTYPE html>
@@ -39,10 +31,19 @@ $reponse = $db->query('SELECT * FROM business');
             <a href="business.php">For Businesses</a>
             <a href="#">For Clients</a>
           </div>
+          <?php if ((isset($_SESSION['session_nom']))&&(isset($_SESSION['session_id']))) { ?>
+            <div class="connexion-options">
+              <span style="font-size: 25px; color: Dodgerblue;">
+                <i class="fas fa-bell"></i>
+              </span>
+              <img src="<?php echo $_SESSION['session_img'];?>" alt="" width="50px;" class="profile-img">
+            </div>
+          <?php }else { ?>
           <div class="login-sigup-button">
             <a href="login.php" class="btn">Login</a>
             <a href="register.php" class="btn" id="SignUp">SignUp</a>
           </div>
+        <?php }?>
         </div>
         <div class="nav-bar-menu">
           <div class="dropdown">
@@ -166,7 +167,7 @@ $reponse = $db->query('SELECT * FROM business');
             </div>
             <div class="info-container">
               <div class="profile-info">
-                <h2><a href="#"><?php echo $i.'.'.$donnes['nom']; ?></a></h2>
+                <h2><a href="bus-profile.php?profile=<?php echo $donnes['nom']; ?>"><?php echo $i.'.'.$donnes['nom']; ?></a></h2>
                 <div class="stars">
                   <p><?php echo $donnes['NbrLike']; ?></p>
                   <span style="font-size: 18px; color: Dodgerblue;">
