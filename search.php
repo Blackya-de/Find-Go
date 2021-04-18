@@ -1,13 +1,12 @@
 <?php
-<<<<<<< HEAD
+
   session_start();
   include("connection.php");
   $reponse = $db->query('SELECT * FROM business');
-  $donnes = $reponse->fetch()
-=======
+  $donnes = $reponse->fetch();
+
   include("connection.php");
   $reponse = $db->query('SELECT * FROM business');
->>>>>>> b7534ddd8c06487c95a4ae996a8ab3df2525fb71
 ?>
 
 <!DOCTYPE html>

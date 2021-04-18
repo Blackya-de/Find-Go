@@ -1,5 +1,5 @@
 <?php
-<<<<<<< HEAD
+
   session_start();
   include("connection.php");
   $reponse = $db->prepare('SELECT * FROM business WHERE nom = ?;');
@@ -150,7 +150,7 @@
      </section>
    </body>
  </html>
-=======
+ <?php
   include("connection.php");
 
   session_start();
@@ -174,23 +174,5 @@
    $Stmt-> bindParam('num',$_POST['num']);
    $Stmt-> bindParam('descr',$_POST['descr']);
    $Stmt-> bindParam('img',$default);
-   <!DOCTYPE html>
-   <html>
-   <head>
-   <meta charset="utf-8">
-   <link rel="stylesheet" href="CSS/busin-profile.css">
-   <title><?php echo $_POST['nom']; ?></title>
- </head>
- <body>
-   <header>
-     <div class="nav-bar">
-       <div class="logo">
-         <a href="search.php"><img src="img/Logo2.svg" alt="" width="100px"></a>
-       </div>
-     </div>
-   </header>
- </body>
- </html>
    $Stmt->execute();
  ?>
->>>>>>> b7534ddd8c06487c95a4ae996a8ab3df2525fb71

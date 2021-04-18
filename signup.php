@@ -13,8 +13,6 @@
 
   }
 
-<<<<<<< HEAD
-=======
   if ($_SERVER["REQUEST_METHOD"]=="POST") {
     if(trim($data['username'])==""){
       $erreur = "Le champs nom est vide.";
@@ -27,7 +25,6 @@
 
   }
 
->>>>>>> b7534ddd8c06487c95a4ae996a8ab3df2525fb71
 /*  if(empty($data['username'])||
     empty($data['email'])||
     empty($data['password'])||
@@ -40,7 +37,7 @@
   }
 
   include("connection.php");
-<<<<<<< HEAD
+
 
   // Verifier que cette e-mail n'existe pas déja
   $verify = $db->prepare("SELECT * FROM clients WHERE nom = :username AND email = :email");
@@ -55,8 +52,7 @@
     $Stmt-> bindParam(2,$data['email']);
     $Stmt-> bindParam(3,$pass);
     $Stmt->execute();
-=======
->>>>>>> b7534ddd8c06487c95a4ae996a8ab3df2525fb71
+
 
   }else{
     $msg = "Ce login existe déja";

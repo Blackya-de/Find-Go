@@ -12,11 +12,8 @@
         <div class="login-form-title">
           <h1>Create Your Account</h1>
           <p><?php
-<<<<<<< HEAD
             if (isset($_GET['error'])) {
-=======
             if (isset($_GET)) {
->>>>>>> b7534ddd8c06487c95a4ae996a8ab3df2525fb71
               echo $_GET['error'];
             }?></p>
         </div>
