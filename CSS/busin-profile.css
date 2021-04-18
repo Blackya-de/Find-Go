@@ -40,8 +40,13 @@ li{
   padding: 0 30px;
 }
 .connexion-options img{
+<<<<<<< HEAD
   border-radius: 50%;
   border: 3px solid #ff5f6d;
+=======
+  border-radius: 60px;
+  padding: 0 10px;
+>>>>>>> b7534ddd8c06487c95a4ae996a8ab3df2525fb71
 }
 
 /*======================================*/
@@ -81,6 +86,7 @@ li{
   flex-direction: column;
 }
 .action-box{
+<<<<<<< HEAD
   height: 100px;
   padding-top: 40px;
   margin-bottom: 20px;
@@ -88,6 +94,14 @@ li{
 }
 #action{
   padding: 10px 0;
+=======
+  padding-top: 40px;
+  margin-bottom: 10px;
+  display: flex;
+}
+.action{
+  margin-top: 5px;
+>>>>>>> b7534ddd8c06487c95a4ae996a8ab3df2525fb71
 }
 /*=======================================*/
 .boxes{
@@ -104,7 +118,11 @@ li{
   background-color: #141414;
   width: 440px;
   border-radius: 30px;
+<<<<<<< HEAD
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+=======
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+>>>>>>> b7534ddd8c06487c95a4ae996a8ab3df2525fb71
   padding-bottom: 40px;
 }
 .image-container{
@@ -179,12 +197,17 @@ li{
 }
 .btn{
   text-align: center;
+<<<<<<< HEAD
   padding: 0.3cm 0.4cm;
+=======
+  padding: 0.2cm 0.4cm;
+>>>>>>> b7534ddd8c06487c95a4ae996a8ab3df2525fb71
   font-size: 15px;
   text-transform: none;
   color: #141414;
   background: #ff5f6d;
   margin: 15px 0;
+<<<<<<< HEAD
   width: 200px;
 }
 .btn-2{
@@ -192,6 +215,13 @@ li{
   padding: 0.3cm 0.4cm;
   font-size: 15px;
   width: 200px;
+=======
+}
+.btn-2{
+  border: 1px solid #ff5f6d;
+  padding: 0.2cm 0.4cm;
+  font-size: 15px;
+>>>>>>> b7534ddd8c06487c95a4ae996a8ab3df2525fb71
 }
 .btn-2:hover{
   color: #141414;
