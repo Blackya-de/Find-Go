@@ -25,11 +25,9 @@
           <div class="logo">
             <a href="#"><img src="img/Logo2.svg" alt="Logo" width="100px"></a>
           </div>
-          <div class="search-bar">
-            <div class="search-container">
-              <input type="text" name="" placeholder="Search">
-              <a href="#"> <li class="fa fa-search"></li> </a>
-            </div>
+          <div class="search-container">
+            <input type="text" name="" placeholder="Search">
+            <a href="#"> <li class="fa fa-search"></li> </a>
           </div>
           <div id="for-business">
             <a href="business.php">For Businesses</a>
@@ -198,8 +196,46 @@
       </section>
     </header>
     <footer>
-      <div class="About">
-
+      <div class="aide">
+        <h2>Aide</h2>
+        <a href="#">Support thchnique</a>
+        <a href="#">Droit</a>
+        <a href="#">F.A.Q</a>
+      </div>
+      <div class="liens">
+        <h2>Liens Utiles</h2>
+        <a href="">Acceuil</a>
+        <a href="#">Mon compte</a>
+        <a href="#">Recherche</a>
+        <a href="#">Paramétre</a>
+        <a href="#">Nous Contacter</a>
+      </div>
+      <div class="wilaya">
+        <h2>Wilaya</h2>
+        <a href="#">Tizi Ouzou</a>
+        <a href="#">Alger</a>
+        <a href="#">Oran</a>
+        <a href="#">Setif</a>
+      </div>
+      <div class="social-media">
+        <h2>Suivez-nous</h2>
+        <div class="icons">
+          <a href="#">
+            <span style="font-size: 25px; color: #ff5f6d;">
+              <i class="fab fa-facebook-square"></i>
+            </span>
+          </a>
+          <a href="#">
+            <span style="font-size: 25px; color: #ff5f6d;">
+              <i class="fab fa-twitter-square"></i>
+            </span>
+          </a>
+          <a href="#">
+            <span style="font-size: 25px; color: #ff5f6d;">
+              <i class="fab fa-instagram-square"></i>
+            </span>
+          </a>
+        </div>
       </div>
     </footer>
     </div>
