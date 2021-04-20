@@ -23,7 +23,7 @@
                 <i class="fas fa-user-circle"></i>
               </span>
               <div class="dropdown-content dropdown-content-2">
-                <a href="#">Profile</a>
+                <a href="profile.php">Profile</a>
                 <a href="logout.php">Déconnexion</a>
               </div>
             </div>

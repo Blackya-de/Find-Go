@@ -6,8 +6,16 @@
     $response-> bindParam(1,$_POST['search']);
     $response-> bindParam(2,$_POST['wilaya']);
     $response->execute();
+  }elseif(isset($_POST['wilaya'])){
+    $response = $db->prepare('SELECT * FROM business WHERE wilaya = ?;');
+    $response-> bindParam(1,$_POST['wilaya']);
+    $response->execute();
+  }elseif(isset($_POST['search'])){
+    $response = $db->prepare('SELECT * FROM business WHERE cat = ?;');
+    $response-> bindParam(1,$_POST['search']);
+    $response->execute();
   }else{
-    $_POST['wilaya'] = 'Tizi Ouzou';
+    $_POST['wilaya'] = 'Toutes';
     $response = $db->query('SELECT * FROM business');
   }
 ?>
