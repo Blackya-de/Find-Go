@@ -196,10 +196,19 @@ h1,h2,p,a,label{
   align-items: center;
   justify-content: center;
 }
+.search-container button{
+  background-color: #ff5f6d;
+  border: none;
+  width: 50px;
+}
 input{
+  width: 200px;
   padding: 10px 10px;
   border: none;
   outline: none;
+}
+#separate{
+  border-left: 1px solid #ff5f6d;
 }
 .button{
   background-color: #ff5f6d;
@@ -317,8 +326,8 @@ input{
 .search-content{
   margin-top: 20px;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
 }
 .search-desc{

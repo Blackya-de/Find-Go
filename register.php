@@ -13,7 +13,6 @@
           <h1>Create Your Account</h1>
           <p><?php
             if (isset($_GET['error'])) {
-            if (isset($_GET)) {
               echo $_GET['error'];
             }?></p>
         </div>

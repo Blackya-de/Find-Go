@@ -22,9 +22,9 @@ h1,h2{
   color: #ff5f6d;
 }
 header{
-  height: 570px;
+  height: 630px;
   background : url("../img/mino.png")  no-repeat;
-  background-size: 100%;
+  background-size: 110%;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 .nav-bar{
@@ -109,6 +109,10 @@ header{
   background-color: #ff5f6d;
   border: none;
   width: 50px;
+}
+#separate{
+  height: 4px;
+  border-left: 2px solid #ff5f6d;
 }
 .search-container li{
   font-size: 20px;

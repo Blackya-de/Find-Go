@@ -53,6 +53,8 @@
     $Stmt-> bindParam(3,$pass);
     $Stmt->execute();
 
+    // Create a session
+    $_SESSION['session_nom'] = $data['username'];
 
   }else{
     $msg = "Ce login existe déja";

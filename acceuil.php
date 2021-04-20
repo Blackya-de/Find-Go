@@ -12,7 +12,7 @@
   <body>
     <header>
       <div class="nav-bar">
-        <a href="acceuil.html"><img src="img/logo.png" alt="" width="100px"></a>
+        <a href="acceuil.php"><img src="img/logo.png" alt="" width="100px"></a>
         <?php if ((isset($_SESSION['session_nom']))&&(isset($_SESSION['session_id']))) { ?>
           <div class="connexion-options">
             <span style="font-size: 30px; color: #ff5f6d;">
@@ -42,7 +42,7 @@
 
         <form class="search-container" action="search.php" method="post">
             <input type="text" name="search" placeholder="Search">
-            <input type="text" name="wilaya" placeholder="Wilaya">
+            <input type="text" name="wilaya" placeholder="Wilaya" id="separate">
             <button type="submit" name="button" class="button">
               <a href="#"><li class="fa fa-search"></li></a>
             </button>

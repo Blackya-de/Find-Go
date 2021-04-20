@@ -30,7 +30,6 @@
       if($count == 1 && !empty($row)){
         $_SESSION['session_id'] = $row['id'];
         $_SESSION['session_nom'] = $row['nom'];
-        $_SESSION['session_img'] = $row['img'];
       }
       else{
         header("Location: login.php?error=Mot de passe incorrect");

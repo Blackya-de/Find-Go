@@ -19,10 +19,13 @@
             <a href="#"><img src="img/businessLogo.svg" alt="Logo" width="100px"></a>
           </div>
           <div class="search-bar">
-            <div class="search-container">
-              <input type="text" name="" placeholder="Search">
-              <a href="#"> <li class="fa fa-search"></li> </a>
-            </div>
+            <form class="search-container" action="search.php" method="post">
+                <input type="text" name="search" placeholder="Search">
+                <input type="text" name="wilaya" placeholder="Wilaya" id="separate">
+                <button type="submit" name="button" class="button">
+                  <a href="#"><li class="fa fa-search"></li></a>
+                </button>
+            </form>
           </div>
           <div id="for-business">
             <a href="#">For Businesses</a>
@@ -54,7 +57,7 @@
       <div class="header-descr">
         <img src="img/logo2.png" alt="" width="400px">
         <h1>Commencez dès maintenant à gérer votre profil d'établissement sur</br> Find Go .</h1>
-        <a href="Create_business.php" class="button">Créer mon business</a>
+        <a href="Create_business.php" class="button2">Créer mon business</a>
       </div>
     </header>
     <section class="first">

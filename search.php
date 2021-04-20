@@ -7,11 +7,10 @@
     $response-> bindParam(2,$_POST['wilaya']);
     $response->execute();
   }else{
-    $reponse = $db->query('SELECT * FROM business');
+    $_POST['wilaya'] = 'Tizi Ouzou';
+    $response = $db->query('SELECT * FROM business');
   }
-
 ?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -30,7 +29,7 @@
           </div>
           <form class="search-container" action="search.php" method="post">
               <input type="text" name="search" placeholder="Search">
-              <input type="text" name="wilaya" placeholder="Wilaya">
+              <input type="text" name="wilaya" placeholder="Wilaya" id="separate">
               <button type="submit" name="button" class="button">
                 <a href="#"><li class="fa fa-search"></li></a>
               </button>
