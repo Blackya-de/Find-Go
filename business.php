@@ -62,7 +62,7 @@
     </header>
     <section class="first">
       <div class="section-text">
-        <h2>Attirez de nouveaux clients grâce à un profil d'établissement attrayant</h1>
+        <h2>Attirez de nouveaux clients grâce à un profil d'établissement attrayant</h2>
         <p>Vous pouvez publier des photos et des offres dans votre profil afin de
           mettre en avant les spécificités de votre établissement,
           et d'inciter les utilisateurs à vous choisir systématiquement.</p>
@@ -76,7 +76,7 @@
         <img src="img/Confirmed.svg" alt="" width="280px" height="200px">
       </div>
       <div class="section-text">
-        <h2>Proposez différentes solutions pour vous contacter</h1>
+        <h2>Proposez différentes solutions pour vous contacter</h2>
         <p>Vos clients cherchent sur Google comment communiquer avec vous, que ce soit par téléphone,
            par message ou en publiant des avis. Aujourd'hui,les méthodes de communications
             se multiplient, ce qui peut vous permettre de développer votre activité.</p>
@@ -91,10 +91,6 @@
           composé de formateur toujours prêts à partager leurs conseils et bonnes pratiques.</p>
       </div>
       <img src="img/maintenance.svg" alt="" width="500px" height="400px">
-    </section>
-    <footer>
-
-
     </section>
     <footer>
       <div class="aide">
