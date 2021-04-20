@@ -1,12 +1,15 @@
 <?php
-
   session_start();
   include("connection.php");
-  $reponse = $db->query('SELECT * FROM business');
-  $donnes = $reponse->fetch();
+  if ((isset($_POST['search']))&&(isset($_POST['wilaya']))) {
+    $response = $db->prepare('SELECT * FROM business WHERE cat = ? AND wilaya = ? ;');
+    $response-> bindParam(1,$_POST['search']);
+    $response-> bindParam(2,$_POST['wilaya']);
+    $response->execute();
+  }else{
+    $reponse = $db->query('SELECT * FROM business');
+  }
 
-  include("connection.php");
-  $reponse = $db->query('SELECT * FROM business');
 ?>
 
 <!DOCTYPE html>
@@ -23,22 +26,33 @@
       <div class="nav-bar">
         <div class="nav-bar-header">
           <div class="logo">
-            <a href="#"><img src="img/Logo2.svg" alt="Logo" width="100px"></a>
+            <a href="acceuil.php"><img src="img/Logo2.svg" alt="Logo" width="100px"></a>
           </div>
-          <div class="search-container">
-            <input type="text" name="" placeholder="Search">
-            <a href="#"> <li class="fa fa-search"></li> </a>
-          </div>
+          <form class="search-container" action="search.php" method="post">
+              <input type="text" name="search" placeholder="Search">
+              <input type="text" name="wilaya" placeholder="Wilaya">
+              <button type="submit" name="button" class="button">
+                <a href="#"><li class="fa fa-search"></li></a>
+              </button>
+          </form>
           <div id="for-business">
             <a href="business.php">For Businesses</a>
             <a href="#">For Clients</a>
           </div>
           <?php if ((isset($_SESSION['session_nom']))&&(isset($_SESSION['session_id']))) { ?>
             <div class="connexion-options">
-              <span style="font-size: 25px; color: Dodgerblue;">
+              <span style="font-size: 30px; color: #ff5f6d;">
                 <i class="fas fa-bell"></i>
               </span>
-              <img src="<?php echo $_SESSION['session_img'];?>" alt="" width="50px;" class="profile-img">
+              <div class="dropdown">
+                <span style="font-size: 40px; color: #ff5f6d;">
+                  <i class="fas fa-user-circle"></i>
+                </span>
+                <div class="dropdown-content dropdown-content-2">
+                  <a href="profile.php">Profile</a>
+                  <a href="logout.php">Déconnexion</a>
+                </div>
+              </div>
             </div>
           <?php }else { ?>
           <div class="login-sigup-button">
@@ -144,7 +158,7 @@
         </div>
         <div class="search-content">
           <div class="search-desc">
-            <h2 id="search-title">Résultat pour Tizi Ouzou</h2>
+            <h2 id="search-title">Résultat pour <?php echo $_POST['wilaya']; ?></h2>
             <div class="sort">
               <div class="dropdown">
                 <a href="#">Recommandé</a>
@@ -159,9 +173,8 @@
             </div>
           </div>
           <?php
-            $i = 1;
-            while($donnes = $reponse->fetch())
-             {
+            $i=1;
+            while($donnes = $response->fetch()){
             ?>
             <div class="box-container">
             <div class="image-container">

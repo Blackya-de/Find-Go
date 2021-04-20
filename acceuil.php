@@ -1,3 +1,6 @@
+<?php
+  session_start();
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,20 +13,40 @@
     <header>
       <div class="nav-bar">
         <a href="acceuil.html"><img src="img/logo.png" alt="" width="100px"></a>
-        <div class="login-form">
+        <?php if ((isset($_SESSION['session_nom']))&&(isset($_SESSION['session_id']))) { ?>
+          <div class="connexion-options">
+            <span style="font-size: 30px; color: #ff5f6d;">
+              <i class="fas fa-bell"></i>
+            </span>
+            <div class="dropdown">
+              <span style="font-size: 40px; color: #ff5f6d;">
+                <i class="fas fa-user-circle"></i>
+              </span>
+              <div class="dropdown-content dropdown-content-2">
+                <a href="#">Profile</a>
+                <a href="logout.php">Déconnexion</a>
+              </div>
+            </div>
+          </div>
+        <?php }else { ?>
+        <div class="login-sigup-button">
           <a href="login.php" class="btn">Login</a>
-          <a href="register.php" id="SignUp" class="btn">SignUp</a>
+          <a href="register.php" class="btn" id="SignUp">SignUp</a>
         </div>
+      <?php }?>
       </div>
       <div class="content">
         <div class="logo">
           <img src="img/findfi.png" alt="">
         </div>
-        <div class="search-container">
-          <input type="text" name="" placeholder="Search">
-          <input type="text" name="" placeholder="Wilaya">
-          <a href="#"> <li class="fa fa-search"></li> </a>
-        </div>
+
+        <form class="search-container" action="search.php" method="post">
+            <input type="text" name="search" placeholder="Search">
+            <input type="text" name="wilaya" placeholder="Wilaya">
+            <button type="submit" name="button" class="button">
+              <a href="#"><li class="fa fa-search"></li></a>
+            </button>
+        </form>
       </div>
     </header>
     <section class="about">

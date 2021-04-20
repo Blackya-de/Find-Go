@@ -5,7 +5,8 @@
   $reponse = $db->prepare('SELECT * FROM business WHERE nom = ?;');
   $reponse-> bindParam(1,$_GET['profile']);
   $reponse-> execute();
-  $donnes = $reponse->fetch()
+  $donnes = $reponse->fetch();
+
  ?>
 <!DOCTYPE html>
  <html>
@@ -23,10 +24,12 @@
          </div>
          <h2 id="name"><?php echo $donnes['nom']; ?></h2>
          <div class="connexion-options">
-           <span style="font-size: 25px; color: Dodgerblue;">
+           <span style="font-size: 30px; color: #ff5f6d;">
              <i class="fas fa-bell"></i>
            </span>
-           <img src="img/Food.jpeg" alt="" width="50px;">
+           <span style="font-size: 40px; color: #ff5f6d;">
+             <i class="fas fa-user-circle"></i>
+           </span>
          </div>
        </div>
      </header>
@@ -97,20 +100,16 @@
              </div>
              <div class="right">
                <div class="box-container action-box">
-                 <div id="action">
-                   <a href="#" class="btn">
-                     <span style="font-size: 20px; color: Dodgerblue;">
-                       <i class="far fa-star"></i>
-                     </span>
-                     Écrire une critique</a>
-                 </div>
-                 <div id="action">
-                   <a href="#" class="btn-2">
-                     <span style="font-size: 20px; color: Dodgerblue;">
-                       <i class="fas fa-camera"></i>
-                     </span>
-                     Ajouter une Photo</a>
-                 </div>
+                 <a href="#" class="btn-2 action">
+                   <span style="font-size: 20px; color: Dodgerblue;">
+                     <i class="fas fa-camera"></i>
+                   </span>Écrire un Avis
+                 </a>
+                 <a href="#" class="btn action">
+                   <span style="font-size: 20px; color: Dodgerblue;">
+                     <i class="fas fa-camera"></i>
+                   </span>Ajouter une photo
+                 </a>
                </div>
                <div class="box-container location-box">
                <h2 class="title">emplacement et horaire</h2>

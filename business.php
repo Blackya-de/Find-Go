@@ -1,3 +1,6 @@
+<?php
+  session_start();
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -23,17 +26,35 @@
           </div>
           <div id="for-business">
             <a href="#">For Businesses</a>
-            <a href="#">For Clients</a>
+            <a href="acceuil.php">For Clients</a>
           </div>
+          <?php if ((isset($_SESSION['session_nom']))&&(isset($_SESSION['session_id']))) { ?>
+            <div class="connexion-options">
+              <span style="font-size: 30px; color: #ff5f6d;">
+                <i class="fas fa-bell"></i>
+              </span>
+              <div class="dropdown">
+                <span style="font-size: 40px; color: #ff5f6d;">
+                  <i class="fas fa-user-circle"></i>
+                </span>
+                <div class="dropdown-content dropdown-content-2">
+                  <a href="#">Profile</a>
+                  <a href="logout.php">Déconnexion</a>
+                </div>
+              </div>
+            </div>
+          <?php }else { ?>
           <div class="login-sigup-button">
             <a href="login.php" class="btn">Login</a>
             <a href="register.php" class="btn" id="SignUp">SignUp</a>
           </div>
+        <?php }?>
         </div>
       </div>
       <div class="header-descr">
+        <img src="img/logo2.png" alt="" width="400px">
         <h1>Commencez dès maintenant à gérer votre profil d'établissement sur</br> Find Go .</h1>
-        <a href="Create_business.php" class="button">Gérer mon business</a>
+        <a href="Create_business.php" class="button">Créer mon business</a>
       </div>
     </header>
     <section class="first">
@@ -58,21 +79,62 @@
             se multiplient, ce qui peut vous permettre de développer votre activité.</p>
       </div>
     </section>
-    <section>
-      <div class="nslpv">
+    <section class="nslpv">
+      <div class="text">
         <h2>Nous somme là pour vous</h2>
-        <p>Notre équipe de support Udemy est disponible 24 h/24 et 7 j/7 pour vous accompagner à chaque
-           étape de la création de votre cours. Consultez notre Teaching Center pour mieux
-          comprendre le processus de création de cours. Rejoignez notre groupe communautaire Studio U,
-          composé de formateurs Udemy toujours prêts à partager leurs conseils et bonnes pratiques.</p>
+        <p>Notre équipe de support est disponible 24 h/24 et 7 j/7 pour vous accompagner à chaque
+          étape de la création de votre entreprise. Consultez notre Teaching Center pour mieux
+          comprendre le processus de création de profile. Rejoignez notre groupe communautaire Studio U,
+          composé de formateur toujours prêts à partager leurs conseils et bonnes pratiques.</p>
       </div>
+      <img src="img/maintenance.svg" alt="" width="500px" height="400px">
     </section>
     <footer>
 
 
     </section>
     <footer>
-
+      <div class="aide">
+        <h2>Aide</h2>
+        <a href="#">Support thchnique</a>
+        <a href="#">Droit</a>
+        <a href="#">F.A.Q</a>
+      </div>
+      <div class="liens">
+        <h2>Liens Utiles</h2>
+        <a href="">Acceuil</a>
+        <a href="#">Mon compte</a>
+        <a href="#">Recherche</a>
+        <a href="#">Paramétre</a>
+        <a href="#">Nous Contacter</a>
+      </div>
+      <div class="wilaya">
+        <h2>Wilaya</h2>
+        <a href="#">Tizi Ouzou</a>
+        <a href="#">Alger</a>
+        <a href="#">Oran</a>
+        <a href="#">Setif</a>
+      </div>
+      <div class="social-media">
+        <h2>Suivez-nous</h2>
+        <div class="icons">
+          <a href="#">
+            <span style="font-size: 25px; color: #ff5f6d;">
+              <i class="fab fa-facebook-square"></i>
+            </span>
+          </a>
+          <a href="#">
+            <span style="font-size: 25px; color: #ff5f6d;">
+              <i class="fab fa-twitter-square"></i>
+            </span>
+          </a>
+          <a href="#">
+            <span style="font-size: 25px; color: #ff5f6d;">
+              <i class="fab fa-instagram-square"></i>
+            </span>
+          </a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

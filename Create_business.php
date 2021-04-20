@@ -8,7 +8,7 @@
   <body>
     <div class="info">
       <div class="logo">
-        <a href="business.php"><img src="img/businessLogo.svg" alt="Logo" width="280px"></a>
+        <a href="business.php"><img src="img/logo2.png" alt="Logo" width="300px"></a>
       </div>
       <h2>Remplir les informations </br>de votre entreprise</h2>
       <img src="img/information.svg" alt="" width="300px">

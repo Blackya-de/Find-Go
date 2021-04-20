@@ -25,6 +25,9 @@ li{
   padding-top: 20px;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
+.nav-bar span{
+  margin: 0 5px;
+}
 #name{
   text-transform: capitalize;
   font-size: 35px;
@@ -88,14 +91,10 @@ li{
   margin-bottom: 20px;
   display: flex;
 }
-#action{
-  padding: 10px 0;
-  padding-top: 40px;
-  margin-bottom: 10px;
-  display: flex;
-}
 .action{
   margin-top: 5px;
+  width: 200px;
+  text-align: center;
 }
 /*=======================================*/
 .boxes{
@@ -189,19 +188,16 @@ li{
 .btn{
   text-align: center;
   padding: 0.3cm 0.4cm;
-  padding: 0.2cm 0.4cm;
   font-size: 15px;
   text-transform: none;
   color: #141414;
   background: #ff5f6d;
   margin: 15px 0;
-  width: 200px;
 }
 .btn-2{
   border: 1px solid #ff5f6d;
   padding: 0.3cm 0.4cm;
   font-size: 15px;
-  width: 200px;
 }
 .btn-2{
   border: 1px solid #ff5f6d;
