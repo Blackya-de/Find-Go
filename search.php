@@ -2,21 +2,23 @@
   session_start();
   include("connection.php");
   if ((isset($_POST['search']))&&(isset($_POST['wilaya']))) {
-    $response = $db->prepare('SELECT * FROM business WHERE cat = ? AND wilaya = ? ;');
+    $response = $db->prepare('SELECT * FROM etablissement WHERE cat = ? AND wilaya = ? ;');
     $response-> bindParam(1,$_POST['search']);
     $response-> bindParam(2,$_POST['wilaya']);
     $response->execute();
-  }elseif(isset($_POST['wilaya'])){
-    $response = $db->prepare('SELECT * FROM business WHERE wilaya = ?;');
+  }if(isset($_POST['wilaya'])&&(empty($_POST['search']))){
+    $response = $db->prepare('SELECT * FROM etablissement WHERE wilaya = ?;');
     $response-> bindParam(1,$_POST['wilaya']);
     $response->execute();
-  }elseif(isset($_POST['search'])){
-    $response = $db->prepare('SELECT * FROM business WHERE cat = ?;');
+  }if(isset($_POST['search'])&&(empty($_POST['wilaya']))){
+    $response = $db->prepare('SELECT * FROM etablissement WHERE cat = ?;');
     $response-> bindParam(1,$_POST['search']);
     $response->execute();
-  }else{
-    $_POST['wilaya'] = 'Toutes';
-    $response = $db->query('SELECT * FROM business');
+    $_POST['wilaya'] = 'All';
+  }
+  if (empty($_POST['search']) && empty($_POST['wilaya'])) {
+    $_POST['wilaya'] = 'All';
+    $response = $db->query('SELECT * FROM etablissement');
   }
 ?>
 <!DOCTYPE html>
@@ -185,11 +187,11 @@
             ?>
             <div class="box-container">
             <div class="image-container">
-              <img src=<?php echo $donnes['img'] ?> alt="">
+              <img src=<?php echo $donnes['image_et'] ?> alt="">
             </div>
             <div class="info-container">
               <div class="profile-info">
-                <h2><a href="bus-profile.php?profile=<?php echo $donnes['nom']; ?>"><?php echo $i.'.'.$donnes['nom']; ?></a></h2>
+                <h2><a href="bus-profile.php?profile=<?php echo $donnes['nom_et']; ?>"><?php echo $i.'.'.$donnes['nom_et']; ?></a></h2>
                 <div class="stars">
                   <p><?php echo $donnes['NbrLike']; ?></p>
                   <span style="font-size: 18px; color: Dodgerblue;">
@@ -204,8 +206,9 @@
                 </span>
                 <a href="#"> <?php echo $donnes['adr'] ?>.</a>
               </div>
-              <p id="info-text"><span>&ldquo;</span> <?php echo $donnes['descr'] ?> .
+              <p id="info-text"><span>&ldquo;</span>Hello <?php echo $donnes['descr'] ?> .
                   <span>&ldquo;</span></p>
+              <a href="avis.php?profile=<?php echo $donnes['nom_et']; ?>" class="avis">Ajouter un avis</a>
             </div>
           </div>
             <?php

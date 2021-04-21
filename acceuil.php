@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include('connection.php');
  ?>
 <!DOCTYPE html>
 <html>
@@ -89,6 +90,30 @@
           <img src="img/xc.png" alt="" width="80px">
           <p>Autre</p>
         </div>
+      </div>
+    </section>
+    <section class="avis">
+      <h2>Avis des utilisateurs</h2>
+      <div class="avis-item">
+        <?php
+        $rsp = $db->prepare('SELECT * FROM avis;');
+        $rsp->execute();
+        while($data = $rsp->fetch()){
+          ?>
+          <div class="box-avis">
+            <div class="user-info">
+              <?php
+              $clt = $db->prepare('SELECT * FROM clients WHERE id = ?;');
+              $clt-> bindParam(1,$data['id']);
+              $clt->execute();
+
+              $user = $clt->fetch();
+              ?>
+              <h2><?php echo $user['nom']; ?></h2>
+            </div>
+            <p><?php echo $data['commentaire']; ?></p>
+          </div>
+        <?php } ?>
       </div>
     </section>
     <section class="business">

@@ -121,7 +121,7 @@
             <h2>E-mail :</h2>
             <p><?php echo $donnes['email']; ?></p>
           </div>
-          <a href="logout" class="btn">Déconnexion</a>
+          <a href="logout.php" class="btn">Déconnexion</a>
         </div>
       </div>
     </header>

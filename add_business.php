@@ -2,7 +2,6 @@
   include("connection.php");
 
   session_start();
-  $default = 'img/default.jpg';
   $nbr = 0;
 
   if(empty($_POST['nom'])||
@@ -14,14 +13,15 @@
    ){
      die('Veuillez remplir tous les champs');
    }
-   $Stmt = $db->prepare('INSERT INTO business (nom,wilaya,cat,adr,NbrLike,descr,NumTel,img) VALUES (:nom,:wilaya,:cat,:adr,0,:descr,:num,:img);');
+   $Stmt = $db->prepare('INSERT INTO etablissement(nom_et,wilaya,cat,adr,NbrLike,email,descr,tel,image_et) VALUES (:nom,:wilaya,:cat,:adr,0,:email,:descr,:num,:img);');
    $Stmt-> bindParam('nom',$_POST['nom']);
    $Stmt-> bindParam('wilaya',$_POST['wilaya']);
    $Stmt-> bindParam('cat',$_POST['cat']);
+   $Stmt-> bindParam('email',$_POST['email']);
    $Stmt-> bindParam('adr',$_POST['adr']);
    $Stmt-> bindParam('num',$_POST['num']);
    $Stmt-> bindParam('descr',$_POST['descr']);
-   $Stmt-> bindParam('img',$default);
+   $Stmt-> bindParam('img',$_POST['img']);
    $Stmt->execute();
 
    $param = $_POST['nom'];

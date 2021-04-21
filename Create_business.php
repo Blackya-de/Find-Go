@@ -21,6 +21,8 @@
         <input type="text" name="cat" placeholder="Catégorie">
         <input type="text" name="adr" placeholder="Adresse">
         <input type="text" name="num" placeholder="Numéro de téléphone">
+        <input type="text" name="email" placeholder="E-mail">
+        <input type="password" name="password" placeholder="Mot de passe">
         <textarea name="descr" placeholder="Description" rows="8" cols="32"></textarea>
         <input type="submit" name="" placeholder="Continuer">
       </form>
