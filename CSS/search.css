@@ -225,9 +225,9 @@ input{
 
 /*------------          Filter Section               ---------*/
 .Search{
-  display: grid;
-  grid-template-columns: 20% 80%;
-  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .filter-section{
   display: flex;

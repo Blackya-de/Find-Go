@@ -48,6 +48,46 @@
               <a href="#"><li class="fa fa-search"></li></a>
             </button>
         </form>
+        <ul>
+          <li>
+            <div class="dropdown">
+              <a href="#">Restaurant</a>
+              <span style="font-size: 14px; color: Dodgerblue;">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+              <div class="dropdown-content">
+                <a href="#">Fast-Food</a>
+                <a href="#">Traditionnelle</a>
+                <a href="#">Autre</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <a href="#">Home Services</a>
+              <span style="font-size: 14px; color: Dodgerblue;">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+              <div class="dropdown-content">
+                <a href="#">Plombier</a>
+                <a href="#">Peintre</a>
+                <a href="#">Autre</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <a href="#">Plus</a>
+              <span style="font-size: 14px; color: Dodgerblue;">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+              <div class="dropdown-content">
+                <a href="#">Hotle</a>
+                <a href="#">Caféteria</a>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </header>
     <section class="about">

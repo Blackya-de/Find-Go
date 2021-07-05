@@ -216,6 +216,9 @@
             }
             ?>
         </div>
+        <div class="map-card">
+          <h2>card Here!</h2>
+        </div>
       </section>
     </header>
     <footer>
