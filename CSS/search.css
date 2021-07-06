@@ -226,8 +226,14 @@ input{
 
 /*------------          Filter Section               ---------*/
 .Search{
+<<<<<<< HEAD
   display:grid;
   grid-template-columns: 20% 55% 25%;
+=======
+  display: flex;
+  justify-content: center;
+  align-items: center;
+>>>>>>> ef92b4f56295742f85b067c93551f397deb18157
 }
 .filter-section{
   display: flex;
