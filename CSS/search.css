@@ -30,22 +30,22 @@ h1,h2,p,a,label{
   align-items: center;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 .nav-bar-header{
   width: 100%;
-  padding: 10px;
+  padding: 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 #for-business a{
-  padding: 14px 16px;
-  font-size: 15px;
+  padding: 12px 14px;
+  font-size: 13px;
 }
 #for-business a:active,
 #for-business a:hover{
-  font-size: 18px;
+  font-size: 14px;
   color: Dodgerblue;
   transition: 0.2s;
 }
@@ -54,16 +54,16 @@ h1,h2,p,a,label{
   padding: 0 40px;
 }
 .nav-bar-menu{
-  font-size: 14px;
+  font-size: 12px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-top: 14px;
+  padding-top: 5px;
 }
 .nav-bar-menu a{
-  padding: 14px 16px;
+  padding: 8px 10px;
 }
 .nav-bar span{
   margin: 0 5px;
@@ -72,7 +72,7 @@ h1,h2,p,a,label{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:0 14px;
+  padding:0 10px;
 }
 .profile-img{
   border-radius: 50%;
@@ -98,7 +98,7 @@ h1,h2,p,a,label{
 }
 }
 .nav-bar-menu a{
-  padding: 14px 16px;
+  padding: 12px 14px;
 }
 /* Dropdown container - needed to position the dropdown content */
 .dropdown {
@@ -172,6 +172,7 @@ h1,h2,p,a,label{
   text-align: center;
   padding: 0.3cm 0.4cm;
   font-size: 15px;
+  font-weight: bold;
   text-transform: none;
   color: #141414;
   border-radius: 8px;
@@ -192,7 +193,7 @@ h1,h2,p,a,label{
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
   height: 50px;
   display: flex;
-  padding: 10 5px;
+  padding: 5px 5px;
   align-items: center;
   justify-content: center;
 }
@@ -217,7 +218,7 @@ input{
   display: inline-block;
 }
 .search-container li{
-  font-size: 20px;
+  font-size: 15px;
   background-color: #ff5f6d;
   color: #fff;
 }
@@ -225,39 +226,41 @@ input{
 
 /*------------          Filter Section               ---------*/
 .Search{
-  display: grid;
-  grid-template-columns: 20% 80%;
-  height: auto;
+  display:grid;
+  grid-template-columns: 20% 55% 25%;
 }
 .filter-section{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
-  margin-left: 40px;
+  margin-left: 20px;
   margin-top: 20px;
 }
 .filter-section h2{
   letter-spacing: 1px;
-  font-size: 18px;
+  font-size: 16px;
   color: #202020;
   margin-bottom: 25px;
+  padding-left: 5px;
+  border-left: 3px solid #ff5f6d;
 }
 .filter-options{
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #444;
+  margin-bottom: 1rem;
   padding-bottom: 1rem;
   font-size: 10px;
+}
+.filter-options form{
+  padding-left: 20px;
 }
 /*-----------------------------------------------------------------*/
 /* The container */
 .container {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 25px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 13px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -278,8 +281,8 @@ input{
   position: absolute;
   top: 0;
   left: 0;
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
   background-color: #ddd;
 }
 
@@ -324,7 +327,6 @@ input{
 }
 /*---------------------------------------------*/
 .search-content{
-  margin: 20px 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -337,23 +339,23 @@ input{
   width: 80%;
 }
 .sort{
-  font-size: 15px;
-  padding: 25px;
+  font-size: 12px;
+  padding: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 #search-title{
-  font-size: 25px;
-  padding: 20px;
+  font-size: 20px;
+  padding: 15px;
   letter-spacing: 1px;
-  font-weight: 200;
+  font-weight: 400;
 }
 /*---------------------------------------------------------*/
 /*============ BOX CONTAINER =============================*/
 .box-container{
-  height: 250px;
-  width: 80%;
+  height: auto;
+  width: 95%;
   margin: 10px 40px;
   border-radius: 10px;
   display: flex;
@@ -366,19 +368,18 @@ input{
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
 }
 .image-container img{
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 10px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .info-container{
-  padding: 40px;
-  font-size: 15px;
+  padding: 30px;
+  font-size: 13px;
   letter-spacing: 1px;
 }
 .info-container p{
   color: #666;
-  letter-spacing: 0px;
 }
 .profile-info{
   display: flex;
@@ -392,7 +393,7 @@ input{
 .stars p {
   font-weight: 400;
   padding-right: 4px;
-  font-size: 17px;
+  font-size: 15px;
 }
 #location{
   display: flex;
@@ -416,13 +417,23 @@ input{
   color: Dodgerblue;
 }
 .avis{
-  margin: 0 180px;
+  margin: 0 140px;
   background-color: Dodgerblue;
-  padding: 10px 20px;
+  padding: 8px 18px;
 }
 .avis:hover{
   background-color: #0e70ff;
   transition: 0.3s;
+}
+/*====================================================*/
+/*===============   MapCard ===========================*/
+/*====================================================*/
+#map-card{
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow: hidden;
 }
 /*====================================================*/
 /*===============   Footer ===========================*/

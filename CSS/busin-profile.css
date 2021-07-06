@@ -29,11 +29,11 @@ li{
   align-items: center;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  padding-top: 15px;
+  padding-top: 5px;
 }
 .nav-bar-header{
   width: 100%;
-  padding: 10px;
+  padding: 5  px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -171,6 +171,7 @@ li{
   text-align: center;
   padding: 0.3cm 0.4cm;
   font-size: 15px;
+  font-weight: bold;
   text-transform: none;
   color: #141414;
   border-radius: 8px;
@@ -376,10 +377,11 @@ input{
 }
 /*==============================================*/
 .location-map{
-  padding: 10px;
-}
-.location-map img{
-  width: 300px;
+  width: 341px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
 }
 .btn{
   text-align: center;
@@ -394,10 +396,12 @@ input{
   border: 1px solid #ff5f6d;
   padding: 0.3cm 0.4cm;
   font-size: 15px;
+  font-weight: bold;
 }
 .btn-3{
   color: #141414;
   padding: 0.3cm 0.4cm;
+  font-weight: bold;
 }
 .btn-3:hover{
   background-color: #ff5f6d;
