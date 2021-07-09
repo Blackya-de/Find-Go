@@ -22,7 +22,7 @@
           <img src="img/linkedin.svg" alt="" width="40px" height="40px">
         </div>
         <div class="login-form-form">
-          <form action="signup.php" method="post" class="form">
+          <form action="profile.php" method="post" class="form">
             <div class="input-content-field">
               <div class="input-field">
                 <input type="text" name="username" placeholder="Username">

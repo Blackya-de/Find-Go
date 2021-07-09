@@ -1,6 +1,9 @@
 <?php
   session_start();
   include("connection.php");
+  if(isset($_POST['search'])){
+    $search = $_POST['search'];
+  }
   if ((isset($_POST['search']))&&(isset($_POST['wilaya']))) {
     $response = $db->prepare('SELECT * FROM etablissement WHERE cat = ? AND wilaya = ? ;');
     $response-> bindParam(1,$_POST['search']);
@@ -11,7 +14,7 @@
     $response-> bindParam(1,$_POST['wilaya']);
     $response->execute();
   }if(isset($_POST['search'])&&(empty($_POST['wilaya']))){
-    $response = $db->prepare('SELECT * FROM etablissement WHERE cat = ?;');
+    $response = $db->prepare("SELECT * FROM etablissement WHERE cat = ? or descr Like '%$search%' or nom_et Like '%$search%';");
     $response-> bindParam(1,$_POST['search']);
     $response->execute();
     $_POST['wilaya'] = 'All';
@@ -45,8 +48,8 @@
               </button>
           </form>
           <div id="for-business">
-            <a href="business.php">For Businesses</a>
-            <a href="#">For Clients</a>
+            <a href="business.php">Commerce</a>
+            <a href="#">Client</a>
           </div>
           <?php if ((isset($_SESSION['session_nom']))&&(isset($_SESSION['session_id']))) { ?>
             <div class="connexion-options">
@@ -65,8 +68,8 @@
             </div>
           <?php }else { ?>
           <div class="login-sigup-button">
-            <a href="login.php" class="btn">Login</a>
-            <a href="register.php" class="btn" id="SignUp">SignUp</a>
+            <a href="login.php" class="btn">Se Connecter</a>
+            <a href="register.php" class="btn" id="SignUp">S'inscrire</a>
           </div>
         <?php }?>
         </div>
@@ -94,7 +97,7 @@
             </div>
           </div>
           <div class="dropdown">
-            <a href="#">Auto Services</a>
+            <a href="#">Service Auto</a>
             <span style="font-size: 14px; color: Dodgerblue;">
               <i class="fas fa-chevron-down"></i>
             </span>
@@ -105,7 +108,7 @@
             </div>
           </div>
           <div class="dropdown">
-            <a href="#">More</a>
+            <a href="#">Autres</a>
             <span style="font-size: 14px; color: Dodgerblue;">
               <i class="fas fa-chevron-down"></i>
             </span>
@@ -119,28 +122,28 @@
       </div>
       <section class="Search">
         <div class="filter-section">
-          <h2>Filters</h2>
+          <h2>Filtres</h2>
           <div class="filter-options">
-            <h2>Features</h2>
+            <h2>Caractéristique</h2>
             <form class="" action="index.html" method="post">
-              <label class="container">Open Now
+              <label class="container">Ouvert
                 <input type="checkbox" >
                 <span class="checkmark"></span>
               </label>
-              <label class="container">For Groups
+              <label class="container">Pour Groupes
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
-              <label class="container">For Kids
+              <label class="container">Pour enfants
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
-              <label class="container">Outedoors places
+              <label class="container">Lieu Plein Air
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
             </form>
-            <a href="#" id="See-all">See all</a>
+            <a href="#" id="See-all">Voir Tous</a>
           </div>
           <div class="filter-options">
             <h2>Wilaya</h2>
@@ -162,7 +165,7 @@
                 <span class="checkmark"></span>
               </label>
             </form>
-            <a href="#" id="See-all">See all</a>
+            <a href="#" id="See-all">Voir Tous</a>
           </div>
         </div>
         <div class="search-content">

@@ -1,5 +1,4 @@
 <?php
-
   session_start();
   include("connection.php");
   if(isset($_GET['profile'])){
@@ -39,6 +38,8 @@
    <head>
      <meta charset="utf-8">
      <link rel="stylesheet" href="CSS/busin-profile.css">
+     <link rel="stylesheet" href="CSS/search.csss">
+     <link rel="stylesheet" href="CSS/footer.css">
      <script src="https://kit.fontawesome.com/1c84e8a5c3.js" crossorigin="anonymous"></script>
      <title><?php echo $donnes['nom_et']; ?></title>
    </head>
@@ -57,8 +58,8 @@
                </button>
            </form>
            <div id="for-business">
-             <a href="business.php">For Businesses</a>
-             <a href="#">For Clients</a>
+             <a href="business.php">Commerce</a>
+             <a href="#">Client</a>
            </div>
            <?php if ((isset($_SESSION['session_nom']))&&(isset($_SESSION['session_id']))) { ?>
              <div class="connexion-options">
@@ -77,8 +78,8 @@
              </div>
            <?php }else { ?>
            <div class="login-sigup-button">
-             <a href="login.php" class="btn-3 ">Login</a>
-             <a href="register.php" class="btn" id="SignUp">SignUp</a>
+             <a href="login.php" class="btn-3 ">se connecter</a>
+             <a href="register.php" class="btn" id="SignUp">S'inscrire</a>
            </div>
          <?php }?>
          </div>
@@ -200,5 +201,49 @@
          <div class="mapouter"><div class="gmap_canvas"><iframe width="341" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=<?php echo $donnes['adr']; ?>&t=&z=16&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><style>.mapouter{position:relative;text-align:right;height:500px;width:341px;}</style><style>.gmap_canvas {overflow:hidden;background:black;height:100vh;width:100%;}</style></div></div>
        </div>
      </section>
+   </section>
+   <footer>
+     <div class="aide">
+       <h2>Aide</h2>
+       <a href="#">Support thchnique</a>
+       <a href="#">Droit</a>
+       <a href="#">F.A.Q</a>
+     </div>
+     <div class="liens">
+       <h2>Liens Utiles</h2>
+       <a href="">Acceuil</a>
+       <a href="#">Mon compte</a>
+       <a href="#">Recherche</a>
+       <a href="#">Paramétre</a>
+       <a href="#">Nous Contacter</a>
+     </div>
+     <div class="wilaya">
+       <h2>Wilaya</h2>
+       <a href="#">Tizi Ouzou</a>
+       <a href="#">Alger</a>
+       <a href="#">Oran</a>
+       <a href="#">Setif</a>
+     </div>
+     <div class="social-media">
+       <h2>Suivez-nous</h2>
+       <div class="icons">
+         <a href="#">
+           <span style="font-size: 25px; color: #ff5f6d;">
+             <i class="fab fa-facebook-square"></i>
+           </span>
+         </a>
+         <a href="#">
+           <span style="font-size: 25px; color: #ff5f6d;">
+             <i class="fab fa-twitter-square"></i>
+           </span>
+         </a>
+         <a href="#">
+           <span style="font-size: 25px; color: #ff5f6d;">
+             <i class="fab fa-instagram-square"></i>
+           </span>
+         </a>
+       </div>
+     </div>
+   </footer>
    </body>
  </html>

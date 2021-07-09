@@ -191,7 +191,7 @@ h1,h2,p,a,label{
 .search-container{
   border-radius: 10px;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-  height: 50px;
+  height: 35px;
   display: flex;
   padding: 5px 5px;
   align-items: center;
@@ -354,7 +354,6 @@ input{
 /*---------------------------------------------------------*/
 /*============ BOX CONTAINER =============================*/
 .box-container{
-  height: 100%;
   width: 95%;
   margin: 10px 40px;
   border-radius: 10px;

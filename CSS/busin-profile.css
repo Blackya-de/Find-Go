@@ -41,6 +41,7 @@ li{
 #for-business a{
   padding: 14px 16px;
   font-size: 15px;
+  color: black;
 }
 #for-business a:active,
 #for-business a:hover{
@@ -190,9 +191,9 @@ li{
 .search-container{
   border-radius: 10px;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-  height: 50px;
+  height: 35px;
   display: flex;
-  padding: 10 5px;
+  padding: 5px 5px;
   align-items: center;
   justify-content: center;
 }
@@ -247,7 +248,7 @@ input{
 /*======================================*/
 .profile-content{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
 }
 .dashboard{
@@ -273,8 +274,8 @@ input{
 .content{
   height: auto;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  background: linear-gradient(to bottom right, #ff5f6d, #ffc371);
+
+  width: 75%;
 }
 .right{
   display: flex;
@@ -294,16 +295,15 @@ input{
 /*=======================================*/
 .boxes{
   padding: 40px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 .box-container{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #141414;
+  background-color: #212121;
   width: 440px;
   border-radius: 30px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
@@ -423,29 +423,32 @@ input{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 40px 0;
+  margin-bottom: 50px;
 }
 .avis h2{
   color: #ff5f6d;
   font-size: 30px;
   font-weight: 400;
-  padding: 40px;
+  padding: 20px;
 }
 .avis-item{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   margin: 0 10px;
   width: 100%;
 }
 .box-avis{
   background-color: #141414;
-  width: 250px;
-  height: 300px;
-  padding: 40px;
+  width: 230px;
+  height: 260px;
+  padding: 30px;
+  margin: 5px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7);
+
 }
 .box-avis p{
-  padding: 25px;
+  height: 260px;
+  padding: 10px;
 }
 .user-info h2{
   color: #ff5f6d;
