@@ -1,5 +1,6 @@
 <?php
   session_start();
+  //Se connecter à la base de données
   include("connection.php");
   if(isset($_GET['profile'])){
     $reponse = $db->prepare('SELECT * FROM etablissement WHERE nom_et = ?;');
@@ -7,8 +8,7 @@
     $reponse-> execute();
     $donnes = $reponse->fetch();
   }else{
-    include("connection.php");
-
+    //Lors de la création d'un nouvelle etablissement cela s'éxecute
     $default = 'img/default.jpg';
     $nbr = 0;
 
@@ -38,7 +38,6 @@
    <head>
      <meta charset="utf-8">
      <link rel="stylesheet" href="CSS/busin-profile.css">
-     <link rel="stylesheet" href="CSS/search.csss">
      <link rel="stylesheet" href="CSS/footer.css">
      <script src="https://kit.fontawesome.com/1c84e8a5c3.js" crossorigin="anonymous"></script>
      <title><?php echo $donnes['nom_et']; ?></title>
@@ -108,13 +107,18 @@
                    <span style="font-size: 20px; color: #ff5f6d;">
                      <i class="fas fa-phone"></i>
                    </span>
-                   <p><?php echo $donnes['tel'] ?></p>
+                   <p>0<?php echo $donnes['tel'] ?></p>
                  </div>
                  <div class="items items-options">
                    <span style="font-size: 20px; color: #ff5f6d;">
                      <i class="fas fa-envelope"></i>
                    </span>
-                   <p><?php echo $donnes['email']; ?></p>
+                 <?php if ($donnes['email'] !=''){?>
+                    <p> <?php echo $donnes['email']; ?><p>
+                   <?php  }else{?>
+                     <p>Pas définie</p>
+                   <?php } ?>
+
                  </div>
                  <div class="items items-options">
                    <span style="font-size: 20px; color: #ff5f6d;">
@@ -175,25 +179,33 @@
            <h2>Avis des utilisateurs</h2>
            <div class="avis-item">
              <?php
+             $item = 0;
              $rsp = $db->prepare('SELECT * FROM avis where id_et = ?;');
              $rsp->bindParam(1,$donnes['id_et']);
              $rsp->execute();
-             while($data = $rsp->fetch()){
+             while(($data = $rsp->fetch()) and ($item < 2)){
                ?>
                <div class="box-avis">
                  <div class="user-info">
                    <?php
+                   // Récuperer les commentaire de la base de données et les afficher
                    $clt = $db->prepare('SELECT * FROM clients WHERE id = ?;');
                    $clt-> bindParam(1,$data['id']);
                    $clt->execute();
 
                    $user = $clt->fetch();
                    ?>
+                   <span style="font-size: 25px; color: #ff5f6d;">
+                     <i class="fas fa-comment"></i>
+                   </span>
                    <h2><?php echo $user['nom']; ?></h2>
                  </div>
-                 <p><?php echo $data['commentaire']; ?></p>
+                 <div class="content-avis">
+                   <img src=<?php echo $user['img']; ?> alt="">
+                   <p><span>&ldquo;&nbsp;&nbsp;</span><?php echo $data['commentaire']; ?><span>&nbsp;&nbsp;&ldquo;</span></p>
+                 </div>
                </div>
-             <?php } ?>
+             <?php $item++;} ?>
            </div>
          </div>
        </div>

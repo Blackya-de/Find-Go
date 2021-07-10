@@ -302,39 +302,63 @@ padding: 10px 0;
   transition: 0.3s;
 }
 /*===========================================*/
+/*-------------------------------------------*/
 .avis{
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  margin: 40px 0;
+  height: auto;
+  margin-bottom: 50px;
 }
 .avis h2{
   color: #ff5f6d;
   font-size: 30px;
   font-weight: 400;
-  padding: 40px;
 }
 .avis-item{
+  margin: 0 10px;
+  width: 70%;
+}
+.content-avis{
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 0 10px;
-  width: 100%;
+}
+.content-avis span{
+  font-size: 25px;
+  color: #ff5f6d;
+}
+.content-avis img{
+  width: 220px;
+  height: 180px;
+  margin-right: 15px;
 }
 .box-avis{
   background-color: #141414;
-  width: 250px;
-  height: 300px;
-  padding: 40px;
+  width: 100%;
+  padding: 30px;
+  margin: 5px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7);
+
 }
 .box-avis p{
-  padding: 25px;
-  color: #666;
+  padding: 10px;
+  color: #999;
+  text-align: center;
 }
+.user-info{
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  border-bottom: 1px solid #ff5f6d;
+  border-left: 3px solid #ff5f6d;
+}
+
 .user-info h2{
   color: #ff5f6d;
-  border-bottom: 1px solid #ff5f6d;
-  padding: 10px;
+  padding: 5px;
+  margin-left: 10px;
 }

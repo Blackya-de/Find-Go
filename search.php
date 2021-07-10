@@ -209,7 +209,7 @@
                 </span>
                 <a href="#"> <?php echo $donnes['adr'] ?>.</a>
               </div>
-              <p id="info-text"><span>&ldquo;</span>Hello <?php echo $donnes['descr'] ?> .
+              <p id="info-text"><span>&ldquo;</span>Hello <?php echo $donnes['descr']?>
                   <span>&ldquo;</span></p>
               <a href="avis.php?profile=<?php echo $donnes['nom_et']; ?>" class="avis">Ajouter un avis</a>
             </div>

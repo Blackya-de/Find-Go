@@ -31,8 +31,8 @@
           </div>
         <?php }else { ?>
         <div class="login-sigup-button">
-          <a href="login.php" class="btn">Login</a>
-          <a href="register.php" class="btn" id="SignUp">SignUp</a>
+          <a href="login.php" class="btn">Se connecter</a>
+          <a href="register.php" class="btn" id="SignUp">S'inscrire</a>
         </div>
       <?php }?>
       </div>
@@ -64,7 +64,7 @@
           </li>
           <li>
             <div class="dropdown">
-              <a href="#">Home Services</a>
+              <a href="#">Services à domicile</a>
               <span style="font-size: 14px; color: Dodgerblue;">
                 <i class="fas fa-chevron-down"></i>
               </span>
@@ -82,7 +82,7 @@
                 <i class="fas fa-chevron-down"></i>
               </span>
               <div class="dropdown-content">
-                <a href="#">Hotle</a>
+                <a href="#">Hotel</a>
                 <a href="#">Caféteria</a>
               </div>
             </div>
@@ -136,9 +136,10 @@
       <h2>Avis des utilisateurs</h2>
       <div class="avis-item">
         <?php
+        $item = 0;
         $rsp = $db->prepare('SELECT * FROM avis;');
         $rsp->execute();
-        while($data = $rsp->fetch()){
+        while(($data = $rsp->fetch()) and ($item<2)){
           ?>
           <div class="box-avis">
             <div class="user-info">
@@ -149,11 +150,17 @@
 
               $user = $clt->fetch();
               ?>
+              <span style="font-size: 25px; color: #ff5f6d;">
+                <i class="fas fa-comment"></i>
+              </span>
               <h2><?php echo $user['nom']; ?></h2>
             </div>
-            <p><?php echo $data['commentaire']; ?></p>
+            <div class="content-avis">
+              <img src=<?php echo $user['img']; ?> alt="">
+              <p><span>&ldquo;&nbsp;&nbsp;</span><?php echo $data['commentaire']; ?><span>&nbsp;&nbsp;&ldquo;</span></p>
+            </div>
           </div>
-        <?php } ?>
+        <?php  $item++;} ?>
       </div>
     </section>
     <section class="business">

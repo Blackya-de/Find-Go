@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="CSS/signup.css">
-    <title>Sign Up</title>
+    <title>S'inscrire</title>
   </head>
   <body>
     <div class="signup-page">
       <div class="signup-form">
         <a href="search.php"><img src="img/wrong.svg" alt="" width="30px" height="30px" id="close_page"></a>
         <div class="login-form-title">
-          <h1>Create Your Account</h1>
+          <h1>Créez votre compte</h1>
           <p><?php
             if (isset($_GET['error'])) {
               echo $_GET['error'];
@@ -25,7 +25,7 @@
           <form action="profile.php" method="post" class="form">
             <div class="input-content-field">
               <div class="input-field">
-                <input type="text" name="username" placeholder="Username">
+                <input type="text" name="username" placeholder="Nom d'utilisateur">
               </div>
               <div class="input-field">
                 <input type="text" name="email" placeholder="Email">
@@ -33,14 +33,13 @@
             </div>
             <div class="input-content-field">
               <div class="input-field">
-                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="password" placeholder="Mot de passe">
               </div>
               <div class="input-field">
-                <input type="password" name="confirm-password" placeholder="Repeat password">
+                <input type="password" name="confirm-password" placeholder="Mot de passe vérification">
               </div>
             </div>
-            <a href="#">Forget Password?</a>
-            <input type="submit" name="" value="Login" >
+            <input type="submit" name="" value="Confirmer" >
           </form>
         </div>
       </div>
@@ -52,7 +51,7 @@
           <h1>One Of Us?</h1>
         </div>
         <div class="signup-info-content">
-          <h3>If you already have an account, just sign in. We've missed you!</h3>
+          <h3>Si vous avez déjà un compte, connectez-vous simplement. Vous nous avez manqué !</h3>
           <a href="#" class="btn">Log In</a>
         </div>
       </div>

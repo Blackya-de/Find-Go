@@ -303,7 +303,7 @@ input{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #212121;
+  background-color: #141414;
   width: 440px;
   border-radius: 30px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
@@ -420,38 +420,58 @@ input{
 .avis{
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
+  height: auto;
   margin-bottom: 50px;
 }
 .avis h2{
   color: #ff5f6d;
   font-size: 30px;
   font-weight: 400;
-  padding: 20px;
 }
 .avis-item{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   margin: 0 10px;
+  width: 70%;
+}
+.content-avis{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.content-avis span{
+  font-size: 25px;
+  color: #ff5f6d;
+}
+.content-avis img{
   width: 100%;
+  height: 100%;
+  margin-right: 15px;
 }
 .box-avis{
   background-color: #141414;
-  width: 230px;
-  height: 260px;
+  width: 100%;
   padding: 30px;
-  margin: 5px;
+  margin-bottom: 15px;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7);
-
 }
 .box-avis p{
-  height: 260px;
   padding: 10px;
+  color: #999;
+  text-align: center;
 }
+.user-info{
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  border-bottom: 1px solid #ff5f6d;
+  border-left: 3px solid #ff5f6d;
+}
+
 .user-info h2{
   color: #ff5f6d;
-  border-bottom: 1px solid #ff5f6d;
-  padding: 10px;
+  padding: 5px;
+  margin-left: 10px;
 }

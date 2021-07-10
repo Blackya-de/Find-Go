@@ -28,8 +28,8 @@
             </form>
           </div>
           <div id="for-business">
-            <a href="#">For Businesses</a>
-            <a href="acceuil.php">For Clients</a>
+            <a href="#">Commerce</a>
+            <a href="acceuil.php">Client</a>
           </div>
           <?php if ((isset($_SESSION['session_nom']))&&(isset($_SESSION['session_id']))) { ?>
             <div class="connexion-options">
@@ -48,8 +48,8 @@
             </div>
           <?php }else { ?>
           <div class="login-sigup-button">
-            <a href="login.php" class="btn">Login</a>
-            <a href="register.php" class="btn" id="SignUp">SignUp</a>
+            <a href="login.php" class="btn">Se connecter</a>
+            <a href="register.php" class="btn" id="SignUp">S'inscrie</a>
           </div>
         <?php }?>
         </div>

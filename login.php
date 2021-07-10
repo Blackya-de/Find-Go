@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="CSS/login.css">
-    <title>Login</title>
+    <title>Se connecter</title>
   </head>
   <body>
     <div class="login-page">
@@ -12,17 +12,17 @@
           <a href="search.php"><img src="img/Logo2.svg" alt="Logo" width="150px"></a>
         </div>
         <div class="login-info-title">
-          <h1>Welcome Back!</h1>
+          <h1>Content de vous revoir!</h1>
         </div>
         <div class="login-info-content">
-          <h3>Sign Up and discover a great amount of new opportunities !</h3>
-          <a href="#" class="btn">Sign In</a>
+          <h3>Inscrivez-vous et découvrez un grand nombre de nouvelles opportunités !</h3>
+          <a href="register.php" class="btn">S'inscrire</a>
         </div>
       </div>
       <div class="login-form">
         <a href="search.php"><img src="img/wrong.svg" alt="" height="30px" width="30px" id="close_page"></a>
         <div class="login-form-title">
-          <h1>Login To Your Account</h1>
+          <h1>Connectez-vous</h1>
         </div>
         <div class="social-media">
           <img src="img/facebook.svg" alt="" width="40px" height="40px">
@@ -42,8 +42,8 @@
               <i><img src="img/password.svg" alt="" width="25px" height="25px"></i>
               <input type="password" name="password" placeholder="Password">
             </div>
-            <a href="#">Forget Password?</a>
-            <input type="submit" name="" value="Login" >
+            <a href="#">Mot de passe oublié ?</a>
+            <input type="submit" name="" value="Se connecter" >
           </form>
         </div>
       </div>
